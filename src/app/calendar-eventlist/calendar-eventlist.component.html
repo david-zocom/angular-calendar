@@ -1,0 +1,10 @@
+<h2>Händelser</h2>
+<p *ngIf="!data">
+	Det finns inga händelser :(
+</p>
+<ul *ngIf="data">
+	<app-calendar-event
+		*ngFor="let event of data"
+		[eventData]="event"
+	></app-calendar-event>
+</ul>
